@@ -43,7 +43,7 @@ chmod 0555 /mnt/usr/local/sbin/update-disk
 chown root:bin /mnt/usr/local/sbin/update-disk
 
 # Fix installpath variable to be able to add packages
-[ -f /mnt/etc/pkg.conf ] || echo installpath=ftp2.fr.openbsd.org > /mnt/etc/pkg.conf
+[ -f /mnt/etc/installurl ] || echo ftp2.fr.openbsd.org > /mnt/etc/installurl
 
 # Run at startup
 cat <<'EOF'>>/mnt/etc/rc.firsttime
